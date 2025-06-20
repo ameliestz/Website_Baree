@@ -8,9 +8,18 @@
 
 body {
   background-color: #E3E3E3;
+ background-image: 
+    radial-gradient(circle at 20% 30%, #d0d0d0 15%, transparent 40%),
+    radial-gradient(circle at 70% 50%, #f0f0f0 20%, transparent 50%),
+    radial-gradient(circle at 50% 80%, #b8b8b8, transparent 28.57%),
+    radial-gradient(circle at 50% 92%, #fafafa 3.36%, transparent 75%);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Alegreya', serif;
   color: #222;
 }
+
+
 
 .baree {
   font-family: 'Playfair Display', serif;
@@ -76,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5;
   padding: 2rem 1rem;
 }
 
@@ -798,7 +807,7 @@ hr {
     
   }
   #slider1 .slide:nth-child(2)::before {
-    background-image: url('Images/WhiteVelvetQuer.png');
+    background-image: url('Images/WhiteVelvetQuer.jpg');
   }
 #slider1 .slide:nth-child(3)::before {
   background-image: url('Images/noirelitequer.png');
@@ -872,7 +881,7 @@ hr {
 }
 
 
-@media screen and (min-width: 480px) {
+/* @media screen and (min-width: 480px) {
   .mySwiper .swiper-slide img {
     max-width: 90%;
     margin-left: auto;
@@ -890,6 +899,37 @@ hr {
   }
   .slide-aurumluxe img {
     content: url('Images/querformat/aurumluxe_quer.png');
+  }
+} */
+
+@media screen and (min-width: 590px) {
+  .swiper.mySwiper,
+  .swiper-wrapper {
+    overflow: visible !important;
+    display: flex !important;
+    gap: 2rem;
+    height: auto !important;
+  }
+  .swiper-slide {
+    width: 100% !important;
+    flex: 1 1 0;
+    transform: none !important;
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  /* Optional: Swiper-spezifische Navigations-Elemente ausblenden */
+  .swiper-pagination,
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swipe-hint {
+    display: none !important;
   }
 }
 
@@ -926,4 +966,91 @@ position: fixed;
 @keyframes arrowMove {
   0%, 100% { left: 0; opacity: 1; }
   50% { left: 6px; opacity: 0.7; }
+}
+@media screen and (min-width: 900px) {
+  body,
+  p,
+  li,
+  .feature-text,
+  .slider1-text,
+  .slider1-text p,
+  .slider1-text h2,
+  .slider1-text h3,
+  .slider1-text h4,
+  h1, h2, h3, h4, h5, h6 {
+  font-size: 1.2rem;
+}  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3, h4, h5, h6 {
+    font-size: 1.1rem;
+  }
+
+@media screen and (min-width: 590px) {
+  #testimonials .testimonial-container {
+    max-width: 900px;
+    padding: 0 2rem;
+  }
+  #testimonials .testimonial-slide .text,
+  #testimonials .testimonial-slide .text p {
+    font-size: 1rem;
+  }
+  #testimonials .testimonial-slide .text h3 {
+    font-size: 1.1rem;
+  }
+  #testimonials .testimonial-slide .text h4 {
+    font-size: 0.95rem;
+  }
+
+  .icon {
+    width: 70px;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .icon {
+    width: 80px;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .hero-img {
+    content: url('Images/1.jpg');
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.7rem; /* Mobil */
+  padding: 2rem 1rem;
+}
+
+@media screen and (min-width: 450px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 590px) {
+  body,
+  p,
+  li,
+  .feature-text,
+  .slider1-text,
+  .slider1-text p {
+    font-size: 1.15rem;
+  }
 }

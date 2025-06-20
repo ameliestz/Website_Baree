@@ -178,3 +178,38 @@ var swiperCarousel = new Swiper(".mySwiper", {
   }
 });
 
+// Swiper 2 bei großen Bildschirmen deaktivieren (nur hinzufügen, nichts am Slider selbst ändern)
+let swiper2Active = true;
+function toggleSwiper2() {
+  if (window.innerWidth >= 590) {
+    if (swiper2Active && window.swiperCarousel) {
+      window.swiperCarousel.destroy(true, true);
+      swiper2Active = false;
+    }
+  } else {
+    if (!swiper2Active) {
+      window.swiperCarousel = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 1,
+        simulateTouch: true,
+        allowTouchMove: true,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 1.5,
+          slideShadows: true,
+        }
+      });
+      swiper2Active = true;
+    }
+  }
+}
+window.addEventListener('resize', toggleSwiper2);
+window.addEventListener('DOMContentLoaded', toggleSwiper2);
+
+
+
